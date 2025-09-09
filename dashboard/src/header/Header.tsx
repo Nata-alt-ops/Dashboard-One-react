@@ -22,7 +22,7 @@ export const Header =() => {
                 <div className="p-2">
                     <div className="p-2 dropdown_con">
                     <button
-                        className="btn btn-dark d-flex align-items-center justify-content-between w-100"
+                        className="btn btn-primary d-flex align-items-center justify-content-between w-100"
                         type="button"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                         aria-expanded={isMenuOpen}
@@ -102,17 +102,6 @@ export const Header =() => {
 
 
 
-                <div className="p-2">Флекс элемент 2</div>
-                <div className="p-2">Флекс элемент 2</div>
-                <div className="p-2">Флекс элемент 2</div>
-                <div className="p-2">Флекс элемент 2</div>
-                <div className="p-2">Флекс элемент 2</div>
-                <div className="p-2">Флекс элемент 2</div>
-                <div className="p-2">Флекс элемент 2</div>
-                <div className="p-2">Флекс элемент 2</div>
-                <div className="p-2">Флекс элемент 2</div>
-                <div className="p-2">Флекс элемент 2</div>
-                <div className="p-2">Флекс элемент 2</div>
                 <div className="p-2">Флекс элемент 2</div>
 
 
