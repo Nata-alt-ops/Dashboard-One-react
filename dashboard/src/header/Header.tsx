@@ -1,9 +1,11 @@
 import React from "react";
+import { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './Header.scss';
 
 export const Header =() => {
+     const [isMenuOpen, setIsMenuOpen] = useState(false);
     return(
         <header>
             <div className="d-flex p-2 mb-2">
@@ -18,35 +20,30 @@ export const Header =() => {
                     <img src="/logo2.png" alt="" className="logo"></img>
                     </div>
                 <div className="p-2">
-                    <div className="dropdown_con">
-                        <div className="dropdown">
-                            <button
-                                className="btn btn-primary dropdown-toggle d-flex align-items-center"
-                                type="button"
-                                data-bs-toggle="dropdown"
-                                aria-expanded="false"
-                            >
-                                <span className="me-1">Dashboard</span>
-                                <span className="badge bg-light text-dark rounded-circle me-1">3</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                    <path fillRule="evenodd" d="M1.5 5.5a.5.5 0 0 1 .5-.5H11a.5.5 0 0 1 0 1H2a.5.5 0 0 1-.5-.5zm0 4a.5.5 0 0 1 .5-.5H11a.5.5 0 0 1 0 1H2a.5.5 0 0 1-.5-.5z"/>
-                                </svg>
-                            </button>
+                    <div className="p-2 dropdown_con">
+                    <button
+                        className="btn btn-dark d-flex align-items-center justify-content-between w-100"
+                        type="button"
+                        onClick={() => setIsMenuOpen(!isMenuOpen)}
+                        aria-expanded={isMenuOpen}
+                    >
+                        <span>Dashboard</span>
+                        <span className="badge bg-light text-dark rounded-circle me-2">3</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"
+                            style={{ transform: isMenuOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.3s' }}>
+                            <path fillRule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </button>
 
-                            <ul className="dropdown-menu dropdown-menu-start">
-                                <li>
-                                    <button className="dropdown-item" type="button">Dashboard One</button>
-                                </li>
-                                <li>
-                                    <button className="dropdown-item" type="button">Dashboard Two</button>
-                                </li>
-                                <li>
-                                    <button className="dropdown-item" type="button">Dashboard Three</button>
-                                </li>
-                            </ul>
+                    {/* Меню в потоке */}
+                    {isMenuOpen && (
+                        <div className="dropdown-menu-in-flow mt-1">
+                            <button className="dropdown-item" type="button">Dashboard One</button>
+                            <button className="dropdown-item" type="button">Dashboard Two</button>
+                            <button className="dropdown-item" type="button">Dashboard Three</button>
                         </div>
-                    </div>
-
+                    )}
+                </div>
 
 
 
@@ -105,6 +102,17 @@ export const Header =() => {
 
 
 
+                <div className="p-2">Флекс элемент 2</div>
+                <div className="p-2">Флекс элемент 2</div>
+                <div className="p-2">Флекс элемент 2</div>
+                <div className="p-2">Флекс элемент 2</div>
+                <div className="p-2">Флекс элемент 2</div>
+                <div className="p-2">Флекс элемент 2</div>
+                <div className="p-2">Флекс элемент 2</div>
+                <div className="p-2">Флекс элемент 2</div>
+                <div className="p-2">Флекс элемент 2</div>
+                <div className="p-2">Флекс элемент 2</div>
+                <div className="p-2">Флекс элемент 2</div>
                 <div className="p-2">Флекс элемент 2</div>
 
 
