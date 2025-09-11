@@ -16,11 +16,13 @@ header{
         background-color: #ffffff;
         width: 100%;
         height: auto;
+        position: relative;
 
         .btn{
          border-radius: 8px !important; 
-         background-color: #3e80f9;
         }
+
+        
 
         button{
           margin-top: 10px;
@@ -66,6 +68,7 @@ header{
       .dropdown-menu {
         min-width: 180px;
         border: none;
+         position: absolute;
         
         
        
@@ -103,14 +106,15 @@ header{
         } 
       }
     }
-    .couses_con{
+    .button_couses_container{
         background-color: #ffffff;
         width: 100%;
         height: auto;
+        position: relative;
 
         .btn{
          border-radius: 8px !important; 
-         background-color: #3e80f9;
+        
         }
 
         button{
@@ -157,6 +161,7 @@ header{
       .couses-menu {
         min-width: 180px;
         border: none;
+         position: absolute;
         
         
        
@@ -192,6 +197,54 @@ header{
         &:hover{
           color:#3e80f9
         } 
+      }
+    }
+
+    .w{
+      width: 205px;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      button{
+        width: 205px;
+        height: 40px;
+        margin-left:5px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        gap:15px;
+        margin-top: 10px;
+
+        &:hover{
+          background-color: #a5c7fc;
+        }
+      
+
+        .t{
+          width: 24px;
+          height: 25px;
+          margin-left: 5px;
+
+          .t path{
+            color: #667797;
+
+          }
+
+         
+          
+        }
+        p{
+          margin-top: 15px;
+          color: #667797;
+
+          &:hover{
+          color: #1d72f2;
+        }
+        }
+
       }
     }
 }
