@@ -5,6 +5,7 @@
 @import "bootstrap/scss/transitions";
 
 header {
+  display: flex;
   
   .sidebar {
     min-height: 100vh;
@@ -310,18 +311,7 @@ header {
             }
           }
        
-        
-
-        
-
-
-
-
-
-
-
-
-
+      
       }
     }
   }
@@ -330,11 +320,12 @@ header {
   .top-navbar {
     background-color: #ff3a3a;
     z-index: 999;
-    height: 74px;
+    height: 75px;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    border-bottom: 1px solid #d5dbe7;
   }
 
 
