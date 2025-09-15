@@ -34,7 +34,7 @@ const toggleAuthetication = () => {
     setIsOpen(isOpen === type ? null : type);
   };
     return(
-        <header className="d-flex flex-colum justify-content-center">
+        <header className="d-flex flex-colum ">
             <div className="sidebar">
             
                 <div className="left_header">
@@ -278,10 +278,49 @@ const toggleAuthetication = () => {
                     </div>
                 </div>
             </div>
-            <div className="top-navbar flex-between gap-16">
+         
+            <div className="top-navbar d-flex  flex-between gap-16  align-items-center">
+                <div className="g  ps-40 h-40 border-transparent focus-border-main-600 bg-main-50 rounded-pill placeholder-15">
+                    <button type="submit" className="h input-icon text-xl d-flex text-grey-100 pointer-event-none">
+                        <svg   xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#d5dbe7" viewBox="0 0 256 256">
+                        <path className="icon_search" d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
+                        </svg>
+                    </button>
+                    <input placeholder="Search..." type="text" className=" search" >
+                    </input>
+                </div>
+                {/*Доделать !!!!!!!*/}
+                <div className="user flex-align gap-16">
+                    <div className="flex-align gap-8">
+                  <div className="dropdown">
+                    <button 
+                        className="dropdown-btn shaking-animation text-gray-500 w-40 h-40 bg-main-50 hover-bg-main-100 transition-2 rounded-circle text-xl flex-center" 
+                        type="button" 
+                        data-bs-toggle="dropdown" 
+                        aria-expanded="false"
+                    > <div className="ring">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#000000" viewBox="0 0 256 256">
+                    <path d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"></path>
+                    </svg></div> 
+                        <span className="position-relative">
+                        <i className="ph ph-bell"></i>
+                        <span className="alarm-notify position-absolute end-0"></span>
+                        </span>
+                    </button>
+                    
+                    {/* Добавьте dropdown menu */}
+                    <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div className="dropdown-item">Уведомление 1</div>
+                        <div className="dropdown-item">Уведомление 2</div>
+                    </div>
+                    </div>
+                   
+                </div>
+                
 
 
             </div>
+             </div>
 
       
 

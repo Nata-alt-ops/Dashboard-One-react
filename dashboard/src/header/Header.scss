@@ -3,6 +3,7 @@
 @import "bootstrap/scss/mixins";
 @import "bootstrap/scss/buttons";
 @import "bootstrap/scss/transitions";
+@import "bootstrap/scss/transitions";
 
 header {
   display: flex;
@@ -317,6 +318,7 @@ header {
   }
   }
   
+  
   .top-navbar {
     background-color: #ff3a3a;
     z-index: 999;
@@ -325,9 +327,77 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    border-bottom: 1px solid #d5dbe7;
-  }
 
+    .g{
+      margin-left: 275px;
+      background-color: #ecf2fe;
+      width: 350px;
+      height: calc(100% - 36px);
+      overflow: hidden;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      border: none;
+
+      .search{
+       width: 350px;
+       height: calc(100% - 10px);
+       border: none;
+       background: none;
+       font-family: 'Roboto', sans-serif;
+       font-size: 15px;
+       color: #5c6066;
+       
+      }
+      button{
+        border: none;
+        background: none;
+        padding-right: 5px;
+        padding-left: 15px;
+      
+  
+     
+      }
+    }
+
+    .user{
+      width: auto;
+      height: auto;
+      background-color: #5c6066;
+
+      .shaking-animation {
+  &:hover {
+    animation: shake 0.5s ease-in-out;
+  }
+  
+  @keyframes shake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-10deg); }
+    50% { transform: rotate(10deg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+  }
+}
+
+.alarm-notify {
+  width: 8px;
+  height: 8px;
+  background-color: #ff4757;
+  border-radius: 50%;
+  top: -2px;
+  right: -2px;
+  animation: pulse 2s infinite;
+  
+  @keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+}
+    }
+
+  }
+  
 
 
 .normal_button {
